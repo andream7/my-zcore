@@ -1,6 +1,9 @@
 use spin::Mutex;
 use alloc::sync::Arc;
 use core::sync::atomic::*;
+use alloc::string::String;
+use crate::object::KernelObject;
+use crate::object::KoID;
 
 /// 空对象
 #[derive(Debug)]

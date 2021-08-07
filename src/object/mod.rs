@@ -1,3 +1,5 @@
+mod object;
+
 use alloc::string::String;
 use core::fmt::Debug;
 use downcast_rs::{impl_downcast, DowncastSync};

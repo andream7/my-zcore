@@ -1,6 +1,8 @@
 #![no_std]
 extern crate alloc;
 
+mod object;
+
 #[cfg(test)]
 mod tests {
     #[test]

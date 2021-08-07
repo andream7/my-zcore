@@ -3,7 +3,7 @@ use core::fmt::Debug;
 use downcast_rs::{impl_downcast, DowncastSync};
 
 /// 内核对象公共接口
-pub trait KernelObject: Send + Sync {
+pub trait KernelObject: DowncastSync + Debug {
     /// 获取对象 ID
     fn id(&self) -> KoID;
     /// 获取对象类型名
@@ -17,5 +17,4 @@ pub trait KernelObject: Send + Sync {
 /// 对象 ID 类型
 pub type KoID = u64;
 
-pub trait KernelObject: DowncastSync + Debug {...}
 impl_downcast!(sync KernelObject);

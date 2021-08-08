@@ -1,4 +1,9 @@
 mod object;
+mod handle;
+mod rights;
+
+pub use self::handle::*;
+pub use self::rights::*;
 
 use alloc::string::String;
 use core::fmt::Debug;
